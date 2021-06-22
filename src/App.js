@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Editor from './Editor.js'
+import Preview from './Preview.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      input: ''
+    }
+
+    this.inputHandler = this.inputHandler.bind(this)
+  }
+
+  inputHandler = (e) => {
+    this.setState({
+      input: e.target.value
+    })
+  }
+
+  render() {
+    return (
+      <div className="App" >
+        <Editor inputHandler={this.inputHandler} currentValue={this.state.input} />
+        <Preview currentValue={this.state.input} />
+      </div>
+    )
+  }
 }
 
 export default App;

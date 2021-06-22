@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+:root{
+  --box-height: 80vh;
+  --box-width: 45vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #606060;
 }
 
-.App-link {
-  color: #61dafb;
+textarea{
+  padding: 0;
+  display: block;
+  outline: none;
+  resize: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar {
+  width: 5px;
 }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.Editor, .Preview{
+  box-shadow: 1px 1px 10px 2px #202020;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.text-header{
+  text-align: end;
+  background-color: #202020;
+  color: #eeeeee;
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 2px solid #151515;
+}
+
+.text-area{
+  height: var(--box-height);
+  width: var(--box-width);
+  background-color: #303030;
+  color: #eeeeee;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  padding: 0 0.5rem;
+}
+
+
+/* Editor */
+
+
+/* Previewer */
