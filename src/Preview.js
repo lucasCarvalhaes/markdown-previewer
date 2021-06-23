@@ -9,6 +9,7 @@ const inLineStyle = {
 
 export default class Preview extends React.Component {
 
+
     render() {
         const markdown = parse(marked(this.props.currentValue))
 

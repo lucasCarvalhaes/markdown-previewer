@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Editor from './Editor.js'
 import Preview from './Preview.js'
+import { placeholder } from './placeholder.js'
 
 
 class App extends React.Component {
@@ -13,6 +14,12 @@ class App extends React.Component {
     }
 
     this.inputHandler = this.inputHandler.bind(this)
+  }
+
+  componentDidMount() {
+    this.setState({
+      input: placeholder.text
+    })
   }
 
   inputHandler = (e) => {
